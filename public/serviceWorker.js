@@ -17,7 +17,7 @@ self.addEventListener('install', (e) => {
 
 // fetching request file offline
 self.addEventListener('fetch', (e) => {
-  e.respondWidth(
+  e.respondWith(
     caches.match(e.request)
       .then(() => {
         return fetch(e.request)
